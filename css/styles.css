@@ -4,25 +4,32 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fafafa;
+}
+
 .background {
     position: relative;
     width: 976px;
     height: 576px;
     border: 1px solid black;
     margin: 0 auto;
+    bottom: 0;
+    background-image: url('../img/background.png');
+    background-repeat: repeat-x;
 }
 
 .dino {
     width: 60px;
     height: 60px;
-    background-color: green;
+    background-image: url('../img/dino.png');
     position: absolute;
     bottom: 0;
 }
 .cactus {
     width: 60px;
     height: 60px;
-    background-color: red;
+    background-image: url('../img/cactus.png');
     position: absolute;
     bottom: 0;
 }
