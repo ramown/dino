@@ -37,10 +37,24 @@ function jump() {
 
 function createCactus() {
     const cactus = document.createElement('div');
-    let cactusPosition = 976;
+    let cactusPosition = 1024;
+    let randomTime = Math.random() * 6000;
+
     cactus.classList.add('cactus');
-    cactus.style.left = 914 + 'px';
+    cactus.style.left = 1024 + 'px';
     background.appendChild(cactus);
+
+    let leftInterval = setInterval( () => {
+        if (cactusPosition < -60) {
+            clearInterval(leftInterval);
+            background.removeChild(cactus);
+        } else {
+            cactusPosition -= 5;
+            cactus.style.left = cactusPosition + 'px';
+        }
+    }, 20);
+
+    setTimeout( createCactus, randomTime)
 }
 
 createCactus();
