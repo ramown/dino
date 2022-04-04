@@ -5,7 +5,7 @@ let isJumping = false;
 let positionDino = 0;
 
 function handleKeyUp(event) {
-    if(event.key === ' ') {
+    if(event.key === ' ' || event.key === 'ArrowUp') {
         if(!isJumping) {
             jump()
         }
@@ -50,7 +50,7 @@ function createCactus() {
             background.removeChild(cactus);
         } else if(cactusPosition > 0 && cactusPosition < 60 && positionDino < 60) {
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1>Fim de Jogo</h1>';
+            document.body.innerHTML = '<h1 class="game-over">Fim de Jogo</h1>';
         } else {
             cactusPosition -= 5;
             cactus.style.left = cactusPosition + 'px';

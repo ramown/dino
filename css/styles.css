@@ -6,17 +6,20 @@
 
 body {
     background-color: #fafafa;
+    font-family: arial;
+    display: flex;
+    justify-content: center;
 }
 
 .background {
-    position: relative;
+    position: absolute;
     width: 976px;
-    height: 576px;
-    border: 1px solid black;
+    height: 200px;
     margin: 0 auto;
     bottom: 0;
     background-image: url('../img/background.png');
     background-repeat: repeat-x;
+    animation: sliderright 600s infinite linear;
 }
 
 .dino {
@@ -26,10 +29,27 @@ body {
     position: absolute;
     bottom: 0;
 }
+
 .cactus {
     width: 60px;
     height: 60px;
     background-image: url('../img/cactus.png');
     position: absolute;
     bottom: 0;
+}
+
+.game-over {
+    text-align: center;
+    color: #585656;
+    margin-top: 50px;
+}
+
+@keyframes sliderright {
+    from {
+        background-position: 70000%;
+    }
+
+    to {
+        background-position: 0;
+    }
 }
