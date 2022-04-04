@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .background {
@@ -12,10 +13,16 @@
 }
 
 .dino {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     background-color: green;
     position: absolute;
     bottom: 0;
-    border: 1px solid red;
+}
+.cactus {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
 }
